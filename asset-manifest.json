@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Binamragupta/authoreshare.git/static/css/main.073c9b0a.css",
+    "main.js": "/Binamragupta/authoreshare.git/static/js/main.c023f99f.js",
+    "static/js/787.228929fe.chunk.js": "/Binamragupta/authoreshare.git/static/js/787.228929fe.chunk.js",
+    "index.html": "/Binamragupta/authoreshare.git/index.html",
+    "main.073c9b0a.css.map": "/Binamragupta/authoreshare.git/static/css/main.073c9b0a.css.map",
+    "main.c023f99f.js.map": "/Binamragupta/authoreshare.git/static/js/main.c023f99f.js.map",
+    "787.228929fe.chunk.js.map": "/Binamragupta/authoreshare.git/static/js/787.228929fe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.c023f99f.js"
+  ]
+}
