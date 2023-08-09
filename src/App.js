@@ -3,7 +3,7 @@ import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import About from './components/About';
 import './App.css';
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import React, { useState } from 'react'
 
 function App() {
@@ -36,13 +36,14 @@ function App() {
     <>
     {/* keep router at outside inside which is routes(switch in older version) inside which is route  where u keep the element of component based on the respective path
     '/'-represent home */}
-    <Router>
+    <Router basename="/Authoreshare">
     <Navbar title="Authoreshare" aboutText="about us" mode={mode} togglemode={togglemode}/>
     <Alert alert={alert}/>
     <div className="container my-4">
     <Routes>
-          <Route exact path="/" element={<TextForm heading="Enter a text to analyze below" mode={mode} showalert={showalert}/>}/>
-          <Route exact path="/about" element={<About/>}/>
+          <Route exact path="/Authoreshare" element={<TextForm heading="Enter a text to analyze below" mode={mode} showalert={showalert}/>}/>
+          <Route exact path="/about" element={<About mode={mode}/>}/>
+          {/* <TextForm heading="Enter a text to analyze below" mode={mode} showalert={showalert}/> */}
           
       
         </Routes>

@@ -85,16 +85,17 @@ export default function TextForm(props) {
             {/* onchange is use to bring changes to the value and its important */}
              <textarea className="form-control" value={Text} onChange={handleOnChange} style={{backgroundColor:props.mode === 'dark'?'#001a40':'white',color: props.mode==='dark'?'white':'black'}} id="myBox" rows="8"></textarea>{/*row for size of textarea */}
         </div>
-        <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick} >Convert to upper case</button>
-        <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick} >Convert to lower case</button>
-        <button className="btn btn-primary mx-2 my-2" onClick={handleClearClick} >To clear</button>
-        <button className="btn btn-primary mx-2 my-2" onClick={handlecopy} >To copy</button>
-        <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces} >remove extra spaces</button>
-        <button className="btn btn-primary mx-2 my-2" onClick={handleSenClick} >Convert to Title case</button>
+        {/* disabled is used to disable button under certain condition for ex here the button is disabled if length is equal to zero */}
+        <button disabled={Text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleUpClick} >Convert to upper case</button>
+        <button disabled={Text.length===0}className="btn btn-primary mx-2 my-2" onClick={handleLowClick} >Convert to lower case</button>
+        <button disabled={Text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleClearClick} >To clear</button>
+        <button disabled={Text.length===0} className="btn btn-primary mx-2 my-2" onClick={handlecopy} >To copy</button>
+        <button disabled={Text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces} >remove extra spaces</button>
+        <button disabled={Text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleSenClick} >Convert to Title case</button>
     </div>
     <div className="container my-3" style={{color: props.mode==='dark'?'white':'black'}}>
         <h2>Your text summary</h2>
-        <p>{Text.split(" ").length} words and {Text.length} characters</p>
+        <p>{Text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {Text.length} characters</p>
         <p>{0.008 * Text.split(" ").length} is the average time that will be taken to read this </p>
         <h3>Preview</h3>
         <p>{Text.length>0?Text:"ENTER SOMETHING IN THE TEXTBOX TO PREVIEW"}</p>
