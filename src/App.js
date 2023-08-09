@@ -34,7 +34,7 @@ function App() {
     }
   return (
     <>
-    {/* keep router at outside inside which is routes(switch in older version) inside which is route  where u keep the element of component based on the respective path
+    {/*  keep router at outside inside which is routes(switch in older version) inside which is route  where u keep the element of component based on the respective path
     '/'-represent home */}
     <Router basename="/Authoreshare">
     <Navbar title="Authoreshare" aboutText="about us" mode={mode} togglemode={togglemode}/>
